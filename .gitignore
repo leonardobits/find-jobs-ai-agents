@@ -1,0 +1,5 @@
+.env
+logs.txt
+output
+inputs.yaml
+__pycache__

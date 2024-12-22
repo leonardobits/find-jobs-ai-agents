@@ -1,0 +1,46 @@
+analisar_perfil_do_candidato_task:
+  description: >
+    Avaliar as informações e os objetivos do candidato para extrair detalhes-chave, 
+    como habilidades, experiências e metas. Use essa análise para identificar os 
+    pontos fortes do candidato e alinhá-los a possíveis oportunidades de emprego.
+
+    Informações do Candidato:
+    {candidate_information}
+
+    Objetivos do Candidato:
+    {candidate_objectives}
+  expected_output: >
+    Um perfil detalhado do candidato em formato JSON, incluindo:
+    - habilidades
+    - experiências
+    - objetivos
+
+procurar_por_vagas_task:
+  description: >
+    Pesquisar oportunidades de emprego que estejam alinhadas ao perfil do candidato. 
+    Utilize ferramentas para buscar, extrair e validar anúncios de vagas.
+  expected_output: >
+    Uma lista de oportunidades de emprego em formato JSON, contendo:
+    - title: Título da vaga
+    - company: Nome da empresa
+    - location: Local da vaga
+    - link: URL do anúncio da vaga
+    - description: Detalhes sobre o anúncio da vaga
+
+criar_curriculos_personalizados_task:
+  description: >
+    Criar currículos personalizados em formato markdown para cada oportunidade de emprego identificada. 
+    Destaque as habilidades e experiências mais relevantes do candidato, enfatizando o alinhamento 
+    com os objetivos do candidato e as descrições das vagas.
+
+    Informações do Candidato:
+    {candidate_information}
+
+    Objetivos do Candidato:
+    {candidate_objectives}
+  expected_output: >
+    Salve no HD, na pasta outputs, uma coleção de currículos em formato markdown, cada um adaptado a um tipo específico de vaga. 
+    Cada currículo deve incluir um resumo profissional, experiências relevantes, habilidades e 
+    qualificações específicas para a oportunidade de emprego.
+    Cada currículo salvo no HD deverá estar em uma pasta específica para a vaga junto com um resumo da vaga e o link dela.
+    Junto com o currículo, deverá ser salvo um txt com um resumo da vaga e o link da vaga.
